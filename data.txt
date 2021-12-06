@@ -1,0 +1,5 @@
+[CHARTTITLE], Sample Data
+Aaa,50
+Bbb,75
+Ccc,60
+Ddd,35

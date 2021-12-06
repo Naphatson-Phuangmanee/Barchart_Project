@@ -1,0 +1,63 @@
+Graphic
+
++ painter: Turtle
+
++ __init__(painter: Turtle)
++ draw_line(x1, y1, x2, y2, linewidth, linecolor): None
++ draw_rect(x1, y1, x2, y2, linewidth, linecolor, fillcolor): None
++ draw_text(x, y, text, align, fontname, fontsize, fonttype, color): None
++ clear(): None
+
+
+
+Bar
+
++ graphic: Graphic
++ left: int
++ bottom: int
++ right: int
++ top: int
++ width: int
++ height: int
++ value: float
++ label: str
+
++ __init__(left, bottom, width, height, label, value, graphic: Graphic)
++ draw(): None
+
+
+
+BarChart
+
++ title: str
++ data: Dict[str, int]
++ total_width: int
++ total_height: int
++ graphic: Graphic
++ chart_width: int
++ chart_left: int
++ chart_right: int
++ chart_top: int
++ chart_bottom: int
++ title_bottom: int
++ bar_max_height: int
++ bars: List[Bar]
+
++ __init__(title, data, total_width, total_height, graphic: Graphic)
+- __build_bars(): List[Bar]
+- __draw_bars(): None
+- __draw_title(): None
+- __draw_axes(): None
++ draw(): None
+
+
+
+BarChartManager
+
++ screen: Screen
+
++ draw_barchart(title, data): None
++ draw_barchart_using_sample_data(): None
++ draw_barchart_using_data_from_file(): None
++ draw_barchart_using_data_from_user_input(): None
++ close(): None
